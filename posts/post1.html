@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript Basics</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body data-post-id="post-1">
+   <!--Header Start -->
+  <header>
+    <div class="logo">
+    <p>My Awesome Blog</p>
+    </div>
+    <!-- NavBar Start -->
+    <nav>
+      <!-- Desktop Nav -->
+        <ul class="desktop-nav">
+        <li><a href="../index.html" >Home</a></li>
+        <li><a href="./post1.html" class="active">Post 1</a></li>
+        <li><a href="./post2.html">Post 2</a></li>
+        <li><a href="./post3.html">Post 3</a></li>
+      </ul>
+
+      <!-- Mobile Nav -->
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!-- Mobile Nav End -->
+    </nav>
+    <!-- NavBar End -->
+
+<!-- Mobile menu start -->
+ <div class="mobile-nav" id="mobileMenu">
+  <ul>
+        <li><a href="../index.html" >Home</a></li>
+        <li><a href="./post1.html" class="active">Post 1</a></li>
+        <li><a href="./post2.html">Post 2</a></li>
+        <li><a href="./post3.html">Post 3</a></li>
+      </ul>
+</div>
+<!-- Mobile menu end -->
+
+<!-- Light / Dark Mode -->
+ <div class="light-dark">
+     <label class="switch">
+      <span class="icon-ld">🌞</span>
+      <input type="checkbox" id="themeToggle" />
+      <span class="slider"></span>
+      <span class="icon-ld">🌙</span>
+     </label>
+ </div>
+<!-- Light / Dark Mode End -->
+</header>
+ <!--Header End -->
+
+ <main >
+    <article>
+      <!-- Post content  -->
+      <div class="post-inner">
+      <h1>JavaScript Basics</h1>
+      <img src="../assets/images/post2.jpg" alt="Post Image">
+      <p class="published"><strong>Published:</strong> May 27, 2025</p>
+
+      <p><strong>Lorem Ipsum </strong> is simply dummy text of the printing and typesetting industry. 
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      <p> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      <p class="meta">Category: Tech | Tags: JavaScript, Frontend</p>
+      </div>
+      <!-- Post content end -->
+    </article>
+
+<!-- Comments -->
+    <section id="comments">
+      <h2>Leave a Comment</h2>
+      <form id="commentForm">
+        <div class="input-name">
+        <input type="text" id="username" placeholder="Your Name" required>
+        </div>
+        <div class="input-msg">
+        <textarea id="message" placeholder="Your Comment" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Submit</button>
+      </form>
+      <div id="commentList"></div>
+    </section>
+<!-- Comments end -->
+    <!-- Footer Starts -->
+     <footer>
+      <div class="footer-outter">
+        <p>Copyright © 2025 — My Awesome Blog.</p>
+      </div>
+     </footer>
+  </main>
+
+  <script src="../script.js"></script>
+</body>
+</html>

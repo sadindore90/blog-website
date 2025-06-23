@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog Website</title>
+  
+  <link rel="stylesheet" href="styles.css">
+
+
+  <!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+ <!--Header Start -->
+  <header>
+    <div class="logo">
+    <p>My Awesome Blog</p>
+    </div>
+    <!-- NavBar Start -->
+    <nav>
+      <!-- Desktop Nav -->
+        <ul class="desktop-nav">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="posts/post1.html">Post 1</a></li>
+        <li><a href="posts/post2.html">Post 2</a></li>
+        <li><a href="posts/post3.html">Post 3</a></li>
+      </ul>
+
+      <!-- Mobile Nav -->
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!-- Mobile Nav End -->
+    </nav>
+    <!-- NavBar End -->
+
+<!-- Mobile menu start -->
+ <div class="mobile-nav" id="mobileMenu">
+  <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="posts/post1.html">Post 1</a></li>
+        <li><a href="posts/post2.html">Post 2</a></li>
+        <li><a href="posts/post3.html">Post 3</a></li>
+      </ul>
+</div>
+<!-- Mobile menu end -->
+
+<!-- Light / Dark Mode -->
+ <div class="light-dark">
+     <label class="switch">
+      <span class="icon-ld">🌞</span>
+      <input type="checkbox" id="themeToggle" />
+      <span class="slider"></span>
+      <span class="icon-ld">🌙</span>
+     </label>
+ </div>
+<!-- Light / Dark Mode End -->
+</header>
+ <!--Header End -->
+
+  <main>
+ <!-- Search bar Start  -->
+<div class="search-bar" id="Searchbar">
+  <h3>Search by category or tag.</h3>
+  <!-- <img src="assets/images/search-svgrepo-com.svg" class="search-icon"> -->
+    <input type="text" id="searchInput" placeholder="Search by title, category or tag..." />
+  </div>
+<!-- Search bar end -->
+
+<!-- Post Start -->
+ <div class="post-outter" id="blogPosts">
+  <!-- Post 1 -->
+    <section class="blog-preview" data-title="JavaScript Basics" data-category="Tech" data-tags="JavaScript,Frontend">
+      <div class="image-box">
+        <img src="assets/images/post2.jpg" alt="Post 1 Image">
+      </div>
+      <h2><a href="posts/post1.html">JavaScript Basics</a></h2>
+      <p>Published: May 27, 2025</p>
+      <p class="meta">Category: Tech | Tags: JavaScript, Frontend</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..</p>
+      <a href="posts/post1.html" class="read">Read more</a>
+    </section>
+ <!-- Post 1 -->
+ <!-- Post 2 -->
+    <section class="blog-preview" data-title="CSS Flexbox" data-category="Tech" data-tags="CSS,Layout">
+      <div class="image-box">
+        <img src="assets/images/post2.jpg" alt="Post 2 Image">
+      </div>
+      <h2><a href="posts/post2.html">CSS Flexbox</a></h2>
+      <p>Published: May 15, 2025</p>
+      <p class="meta">Category: Tech | Tags: CSS, Layout</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..</p>
+      <a href="posts/post2.html" class="read">Read more</a>
+    </section>
+ <!-- Post 2 -->
+ <!-- Post 3 -->
+    <section class="blog-preview" data-title="Healthy Habits" data-category="Lifestyle" data-tags="Health,Wellness">
+      <div class="image-box">
+        <img src="assets/images/post2.jpg" alt="Post 3 Image">
+      </div>
+      <h2><a href="posts/post3.html">Healthy Habits</a></h2>
+      <p>Published: May 15, 2025</p>
+      <p class="meta">Category: Lifestyle | Tags: Health, Wellness</p>
+     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..</p>
+      <a href="posts/post3.html" class="read">Read more</a>
+    </section>
+ <!-- Post 3 -->
+     
+    </div>
+    <!-- Post End -->
+
+    <!-- Footer Starts -->
+     <footer>
+      <div class="footer-outter">
+        <p>Copyright © 2025 — My Awesome Blog.</p>
+      </div>
+     </footer>
+  </main>
+
+  <script>
+    // Search by title, category or tag
+document.addEventListener('DOMContentLoaded', () => {
+document.getElementById("searchInput").addEventListener("input", function () {
+  const searchValue = this.value.toLowerCase();
+  const posts = document.querySelectorAll(".blog-preview");
+
+  posts.forEach(post => {
+    const title = post.getAttribute("data-title").toLowerCase();
+    const category = post.getAttribute("data-category").toLowerCase();
+    const tags = post.getAttribute("data-tags").toLowerCase();
+
+    if (
+      title.includes(searchValue) ||
+      category.includes(searchValue) ||
+      tags.includes(searchValue)
+    ) {
+      post.style.display = "block";
+    } else {
+      post.style.display = "none";
+    }
+  });
+});
+});
+  </script>
+ <script src="script.js"></script>
+</body>
+</html>
