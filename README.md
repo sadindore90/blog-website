@@ -24,7 +24,7 @@ A responsive blog website built using **HTML**, **CSS**, and **JavaScript**.  Th
 - Responsive blog layout
 - Blog post cards with title, date, category, tags and excerpt
 - Category & tag based search filter
-- SHeader with navigation and search bar
+- Header with navigation and search bar
 - Comment section using localstorage
 - Dark and light mode toggle
 
