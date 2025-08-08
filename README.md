@@ -55,13 +55,7 @@ git clone (https://github.com/sadindore90/blog-website.git)
 
 2. Open `index.html` in your browser.
 
-> No build tools or backend required—it's a static website.
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
+> No build tools or backend required, it's a static website.
 
 ---
 
@@ -73,6 +67,7 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 ## 🙋‍♀️ Author
+
 Shalini Gupta
 [LinkedIn](https://www.linkedin.com/in/shalini-gupta-8614877b/) 
 [GitHub] (https://github.com/sadindore90/blog-website)
