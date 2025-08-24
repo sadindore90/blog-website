@@ -27,6 +27,7 @@ A responsive blog website built using **HTML**, **CSS**, and **JavaScript**.  Th
 - Header with navigation and search bar
 - Comment section using localstorage
 - Dark and light mode toggle
+- Social Share feature
 
 ---
 
@@ -54,8 +55,32 @@ A responsive blog website built using **HTML**, **CSS**, and **JavaScript**.  Th
 git clone (https://github.com/sadindore90/blog-website.git)
 
 2. Open `index.html` in your browser.
-
 > No build tools or backend required, it's a static website.
+
+3. Optional (Recommended): Use a Local Server
+If you're having issues with local image loading:
+
+a) With VS Code:
+Install Live Server extension
+
+Right-click index.html → "Open with Live Server"
+
+b) Use http-server with Node.js
+Step-by-step:
+1. Install Node.js (if not already):
+https://nodejs.org/
+
+2. Install http-server:
+npm install -g http-server
+
+3. Run it in your project folder:
+cd your-project-folder
+http-server
+
+4. You’ll see something like:
+Starting up http-server on http://127.0.0.1:8080
+
+5. Open the browser and go to http://127.0.0.1:8080
 
 ---
 

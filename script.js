@@ -96,5 +96,27 @@ function addCommentToDOM({ username, text }) {
   commentsContainer.appendChild(commentElement);
 }
   
- });
+// Soical share script
+// Get current page URL & title
+const pageUrl = encodeURIComponent(window.location.href);
+const pageTitle = encodeURIComponent(document.title);
+
+// Facebook
+document.getElementById("share-facebook").href =
+  `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+
+// Twitter
+document.getElementById("share-twitter").href =
+  `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
+
+// LinkedIn
+document.getElementById("share-linkedin").href =
+  `https://www.linkedin.com/shareArticle?mini=true&url=${pageUrl}&title=${pageTitle}`;
+
+// WhatsApp
+document.getElementById("share-whatsapp").href =
+  `https://api.whatsapp.com/send?text=${pageTitle}%20${pageUrl}`;
+
+
+});
   
